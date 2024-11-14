@@ -1,91 +1,126 @@
-# study-of-basic-gates
+# Experiment-1 Study of basic digital IC s and verification of truth tables for different logic gates realization
 
 ## AIM:
+ 
+To study about the different digital IC’s and to verify the truth table in Quartus for the basic logic gates using Verilog programming.
 
-To study and verify the truth table of logic gates in Quartus II using Verilog programming.
+## Equipments Required:
 
-### Equipments Required:
+Hardware – PCs, Cyclone II , USB flasher
 
-Software – Quartus prime 
+Software – Quartus prime
 
-### Theory
+## Theory:
 
 Introduction Logic gates are the basic building blocks of any digital system. Logic gates are electronic circuits having one or more than one input and only one output. The relationship between the input and the output is based on a certain logic. Based on this, logic gates are named as
 
-AND gate OR gate NOT gate NAND gate NOR gate Ex-OR gate Ex-NOR gate
+AND gate
 
-## AND gate
+OR gate
 
-The AND gate is an electronic circuit that gives a high output (1) only if all its inputs are high. A dot (.) is used to show the AND operation i.e. A.B or can be written as AB
-Y= A.B
+NOT gate
 
+NAND gate
 
-## OR gate
+NOR gate
 
-The OR gate is an electronic circuit that gives a high output (1) if one or more of its inputs are high. A plus (+) is used to show the OR operation.
-Y= A+B
+Ex-OR gate
 
+Ex-NOR gate
 
-## NOT gate
+1) AND gate:
+    The AND gate is an electronic circuit that gives a high output (1) only if all its inputs are high. A dot (.) is used to show the AND operation i.e. A.B or can be written as AB
 
-The NOT gate is an electronic circuit that produces an inverted version of the input at its output. It is also known as an inverter. If the input variable is A, the inverted output is known as NOT A. This is also shown as A' or A with a bar over the top, as shown at the outputs.
-Y= A'
+    Y= A.B
 
+2) OR gate
+   
+   The OR gate is an electronic circuit that gives a high output (1) if one or more of its inputs are high. A plus (+) is used to show the OR operation.
 
-## NAND gate
+   Y= A+B
 
-This is a NOT-AND gate which is equal to an AND gate followed by a NOT gate. The outputs of all NAND gates are high if any of the inputs are low. The symbol is an AND gate with a small circle on the output. The small circle represents inversion.
-Y= (AB)’
+3) NOT gate
+   
+   The NOT gate is an electronic circuit that produces an inverted version of the input at its output. It is also known as an inverter. If the input variable is A, the inverted output is known as NOT A. This is 
+ also shown as A' or A with a bar over the top, as shown at the outputs.
 
+    Y= A'
 
-## NOR gate
+4) NAND gate
+   
+   This is a NOT-AND gate which is equal to an AND gate followed by a NOT gate. The outputs of all NAND gates are high if any of the inputs are low. The symbol is an AND gate with a small circle on the output. 
+ The small circle represents inversion.
 
-This is a NOT-OR gate which is equal to an OR gate followed by a NOT gate. The outputs of all NOR gates are low if any of the inputs are high. The symbol is an OR gate with a small circle on the output. The small circle represents inversion.
-Y= (A+B)’
+   Y= (AB)’
 
+5) NOR gate
+   
+   This is a NOT-OR gate which is equal to an OR gate followed by a NOT gate. The outputs of all NOR gates are low if any of the inputs are high. The symbol is an OR gate with a small circle on the output. The 
+ small circle represents inversion.
 
-## Ex-OR gate
+   Y= (A+B)’
 
-The 'Exclusive-OR' gate is a circuit which will give a high output if either, but not both of its two inputs are high. An encircled plus sign (⊕) is used to show the Ex-OR operation.
-Y= A⊕B
+6) Ex-OR gate
+   
+   The 'Exclusive-OR' gate is a circuit which will give a high output if either, but not both of its two inputs are high. An encircled plus sign (⊕) is used to show the Ex-OR operation.
 
+   Y= A⊕B
 
-## Ex-NOR gate
+7) Ex-NOR gate
+   
+   The 'Exclusive-NOR' gate circuit does the opposite to the EX-OR gate. It will give a low output if either, but not both of its two inputs are high. The symbol is an EX-OR gate with a small circle on the 
+ output. The small circle represents inversion.
 
-The 'Exclusive-NOR' gate circuit does the opposite to the EX-OR gate. It will give a low output if either, but not both of its two inputs are high. The symbol is an EX-OR gate with a small circle on the output. The small circle represents inversion.
-Y= A⊕B
+   Y= A⊕B
 
+## Procedure:
 
-## Procedure
+Connect the supply (+5V) to the circuit
 
-1.	Type the program in Quartus software.
+Switch ON the main switch
 
-2.	Compile and run the program.
+Press the switches for inputs “A” and “B”. The switch is ON state when 1 is pressed. The switch is OFF state when 0 is pressed.
 
-3.	Generate the RTL schematic and save the logic diagram.
+If the output is 1, then the bulb glows.
 
-4.	Create nodes for inputs and outputs to generate the timing diagram.
+Check all the gates following the same procedure.
 
-5.	For different input combinations generate the timing diagram.
+## Program:
 
-
-
-
-
-## PROGRAM
-
-Program for logic gates and verify its truth table in quartus using Verilog programming
-Developed by:MADHAN BABU P
+```
+/* 
+Program to verify the truth table in quartus for the basic logic gates using Verilog programming.
+Developed by: MADHAN BABU P.
 RegisterNumber: 212222230075
-![output](./1.png)
-## Logic symbol & Truthtable
-![output](./2.png)
-## RTL realization Output:
-![output](./3.png)
-## Output
-![output](./4.png)
-## Result:
+module Exp1(a,b,y1,y2,y3,y4,y5,y6,y7);
+input a,b;
+output y1,y2,y3,y4,y5,y6,y7;
+and(y1,a,b);
+or(y2,a,b);
+not(y3,a);
+xor(y4,a,b);
+nand(y5,a,b);
+nor(y6,a,b);
+xnor( y7,a,b);
+endmodule
+ */
+```
+
+TRUTH TABLE:
+
+![WhatsApp Image 2023-11-27 at 16 35 08_a81ebc98](https://github.com/Msuren48106/Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-/assets/150503875/3e3fe486-2218-41cc-8d6c-802fdd4058a2)
+
+
+RTL realization:
+
+![Screenshot 2024-10-03 103649](https://github.com/user-attachments/assets/864b00f5-7259-4e4e-a7e9-2abf48db8928)
+
+
+
+WAVE FORM:
+
+![Screenshot 2024-10-03 104234](https://github.com/user-attachments/assets/4ba3bf81-b4d0-4e64-9543-9128e769c711)
+
+
+Result: 
 Thus the different digital IC’s are studied and the truth table for different logic gates are verified.
-
-
-
