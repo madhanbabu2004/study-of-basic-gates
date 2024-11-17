@@ -122,5 +122,5 @@ WAVE FORM:
 ![Screenshot 2024-10-03 104234](https://github.com/user-attachments/assets/4ba3bf81-b4d0-4e64-9543-9128e769c711)
 
 
-Result: 
+## Result: 
 Thus the different digital IC’s are studied and the truth table for different logic gates are verified.
