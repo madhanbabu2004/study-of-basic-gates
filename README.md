@@ -1,4 +1,4 @@
-# EX-1 Study of basic digital IC s and verification of truth tables for different logic gates realization
+# EX NO:1 Study of basic digital IC s and verification of truth tables for different logic gates realization
 
 ## AIM:
  
